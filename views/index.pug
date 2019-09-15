@@ -1,0 +1,65 @@
+doctype html
+//- {{>head}}
+head
+  include partials/head.pug
+
+.sideNav
+  a(href='#about') MENUS
+  a(href='#services') ABOUT IS
+  a(href='#clients') GALLERY
+  a(href='#contact') CONTACT
+.mainHeader
+  .caption
+    span.border A Taste of Nostalgia
+    br
+    span.border Local Ingridients &amp; Seasonal Flavours
+.menuModule
+  .menuNav
+    ul
+      li
+        a(href='#menu-breakfast') Breakfast
+      li
+        a(href='#menu-lunch') Lunch
+      li
+        a(href='#menu-dinner') Dinner
+  .resultMenu
+    .menu-breakfast
+      p Breakfast
+      hr.lineDiv
+      .gridContainer
+    .menu-lunch
+      p Lunch
+      hr.lineDiv
+      .gridContainer
+    .menu-dinner
+      p Dinner
+      hr.lineDiv
+      .gridContainer
+include partials/reservation.pug
+include partials/foot.pug
+
+script.
+  let gridItem
+  const menuData = !{menuData},
+  gridContainer = document.querySelectorAll(".gridContainer")
+
+    const populateMenu = (cur,meal) => {
+      for(const item of menuData[meal]) {
+        //- event delegation target gridContainer tag as parent element and use insert Adjacent 
+        gridItem = `<div class="grid-item">
+                      <div class="itemName">${item.name}</div>
+                        <div class="itemDesc">${item.desc}</div>
+                          <div class="itemPrice">${item.price}</div>
+                      </div>`
+
+        cur.insertAdjacentHTML('beforeend',gridItem)
+    }
+  }
+
+  Array.from(gridContainer).forEach(cur => {
+      const meal = (cur.parentNode.className).toString().substring(5)
+      populateMenu(cur,meal)
+  })
+
+
+script(type='module' src='/js/control.js')

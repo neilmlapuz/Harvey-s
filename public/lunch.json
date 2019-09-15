@@ -1,0 +1,143 @@
+{
+    "breakfast": [
+        {
+            "name": "FARMHOUSE PLATE",
+            "desc": "Traditional Bacon, Scrambled Eggs, Pork Sausages, Sweet Potato, Rosti Clonakilty Black & White Pudding, Tomato Relish, Bretzel Toast",
+            "price": "11.00"
+        },
+        {
+            "name": "BUTTERMILK CRISPY CHICKEN BENEDICT",
+            "desc": "Crispy Chicken, Poached Eggs, Onion Chtney, Toasted English Muffin",
+            "price": "11.00"
+        },
+        {
+            "name": "WOODLAND BREAKFAST",
+            "desc": "Scrambled Eggs, Roast Sweet Potato, Cherry Tomatoes, Bretzel Toast",
+            "price": "9.00"
+        },
+        {
+            "name": "CLASSIC EGGS BENEDICT",
+            "desc": "Traditional Bacon, Poached Eggs, Toasted English Muffin",
+            "price": "10.00"
+        },
+        {
+            "name": "PROTEIN EGG WHITE OMELETTE",
+            "desc": "Grilled Chicken, Goat's Cheese , Scallions, Egg Whites",
+            "price": "11.00"
+        },
+        {
+            "name": "AMERICAN PANCAKES",
+            "desc": "Buttermilk Pancakes With Streak Irish Bacon, Rocket Leaves and Maple Syrup",
+            "price": "9.00"
+        },
+        {
+            "name": "CHICKEN & BACON CAESAR",
+            "desc": "Roast Chicken, Irish Bacon, Parmesan Shavings, Caesar Dressing",
+            "price": "13.00"
+        },
+        {
+            "name": "GRILLED GOAT'S CHEESE SANDWICH",
+            "desc": "Goat's Cheese, Sundried Tomatoes, Rocket, Red Onion Marmalade, Toasted Ciabatta",
+            "price": "8.00"
+        },
+        {
+            "name": "TURKEY REUBEN SANDWICH",
+            "desc": "Roast Turkey, Swiss Cheese, Vine Tomatoes, Mixed Leaves, Chipotle Aioli",
+            "price": "8.00"
+        }
+    ],
+    "lunch": [
+        {
+            "name": "CAJUN CHICKEN QUESADILLAS",
+            "desc": "Cajun Chicken, Monterey Jack Cheddar, Tortilla Wraps, Rustic Fries",
+            "price": "14.00"
+        },
+        {
+            "name": "BBQ STYLE PULLED PORK",
+            "desc": "BBQ Pulled Pork, Tobacco Onions, Sour Cream, Sweet Potato Fries",
+            "price": "14.00"
+        },
+        {
+            "name": "BURGER IN A BOWL",
+            "desc": "Beef Burger, Goat's Cheese, Spinach, Sundried Tomatoes, Red Onion",
+            "price": "13.00"
+        },
+        {
+            "name": "BUFFALO WINGS",
+            "desc": "Spicy Buffalo Chicken Wings, Celery Sticks",
+            "price": "13.00"
+        },
+        {
+            "name": "TEMPURA LEMON SOLE",
+            "desc": "Tempura Lemon Sole, Red Cabbage Slaw, Served On Corn Bread & Sweet Potatoes",
+            "price": "14.00"
+        },
+        {
+            "name": "SIGNATURE BURGER",
+            "desc": "Beef Burger ,Irish Bacon, Applewood Chedda, Brioche Bun, Crispy Fries",
+            "price": "15.00"
+        },
+        {
+            "name": "CHICKEN & BACON CAESAR SALAD",
+            "desc": "Roast Chicken, Irish Bacon, Cos Lettuce, Croutons",
+            "price": "13.00"
+        },
+        {
+            "name": "CHICKEN & CHORIZO SALAD",
+            "desc": "Roast Chicken, Chorizo, Sundried Tomatoes, Rocket Leaves, Mango Dressing",
+            "price": "20"
+        },
+        {
+            "name": "SUPERFOOD",
+            "desc": "Roast Chicken, Butternut Squash, Pomegrante, Mixed Leaves",
+            "price": "13.00"
+        }
+    ],
+    "dinner": [
+        {
+            "name": "HOUSE MADE BEEF BRISKET POUTINE",
+            "desc": "Classical Well Made Beef Brisket With Special Sauce & Roast Potatoes",
+            "price": "18.00"
+        },
+        {
+            "name": "BEEF CHEESEBURGER",
+            "desc": "Classic Cheese Burger With Homemade Sauce Served With Crispy Fries",
+            "price": "17.00"
+        },
+        {
+            "name": "NORDIC SHRIMP ROLL",
+            "desc": "Fresh Shrimp Served In A Grilled Roll Served With Roast Potatoes",
+            "price": "23.00"
+        },
+        {
+            "name": "CAESAR SALAD & POPCORN CHICKEN",
+            "desc": "Glazed Across Cos Lettuce, Croutons And Paermesan Shavings",
+            "price": "17.00"
+        },
+        {
+            "name": "LIGHTLY SEARED TUNA SALAD",
+            "desc": "Fresh Tuna Mixed With Seared Salad With Special Dressing",
+            "price": "17.00"
+        },
+        {
+            "name": "BEEF TARTARE",
+            "desc": "Slow Cooked Beef Served in Tartare With Roast Potatoes",
+            "price": "18.00"
+        },
+        {
+            "name": "SALMON TARTARE",
+            "desc": "Slow Cooked Salmon Served in Tartare With Roast Potatoes",
+            "price": "20.00"
+        },
+        {
+            "name": "DUCK CONFIT SHEPERD'S PIE",
+            "desc": "Irresistable Crispy Duck Confit Served On Sheper's Pie",
+            "price": "20.00"
+        },
+        {
+            "name": "BEEF FLANK STEAK",
+            "desc": "Slow Cook Beef With Butter Fried Steak, Served with Crispy Fries",
+            "price": "20.00"
+        }
+    ]
+}
