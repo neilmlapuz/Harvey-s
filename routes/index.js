@@ -27,5 +27,16 @@ router.get('/', (req, res) => {
         })
     })
 })
+router.post('/:reserve', (req, res) => {
+    //multiple http post can be implemented by an if statement of req.params
+    console.log(req.params)
+    console.log(req.body)
+
+
+    // console.log(">>>", "NOPE")
+    return
+})
+
+
 
 module.exports = router

@@ -43,16 +43,16 @@ script.
   const menuData = !{menuData},
   gridContainer = document.querySelectorAll(".gridContainer")
 
-    const populateMenu = (cur,meal) => {
-      for(const item of menuData[meal]) {
-        //- event delegation target gridContainer tag as parent element and use insert Adjacent 
-        gridItem = `<div class="grid-item">
-                      <div class="itemName">${item.name}</div>
-                        <div class="itemDesc">${item.desc}</div>
-                          <div class="itemPrice">${item.price}</div>
-                      </div>`
+  const populateMenu = (cur,meal) => {
+    for(const item of menuData[meal]) {
+      //- event delegation target gridContainer tag as parent element and use insert Adjacent 
+      gridItem = `<div class="grid-item">
+                    <div class="itemName">${item.name}</div>
+                      <div class="itemDesc">${item.desc}</div>
+                        <div class="itemPrice">${item.price}</div>
+                    </div>`
 
-        cur.insertAdjacentHTML('beforeend',gridItem)
+      cur.insertAdjacentHTML('beforeend',gridItem)
     }
   }
 
