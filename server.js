@@ -1,7 +1,10 @@
 const express = require('express'),
     app = express(),
     path = require('path'),
-    bodyParser = require('body-parser')
+    bodyParser = require('body-parser'),
+    mongo = require('mongodb').MongoClient,
+    assert = require('assert'),
+    url = 'mongodb://localhost:27017'
 
 
 
@@ -15,11 +18,30 @@ app.use(bodyParser.json())
 //allows parsing of the post data
 app.use(bodyParser.urlencoded({ extended: false }))
 
+
+mongo.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
+    assert.equal(null, err)
+    console.log("Success Server Connection")
+
+    const db = client.db('HarveyResto'),
+        collectionMenu = db.collection('menu'),
+        collectionReserve = db.collection('reserve')
+
+    app.locals['menu'] = collectionMenu
+    app.locals['reserve'] = collectionReserve
+
+
+})
+
+app.use((req, res, next) => {
+    const collectionMenu = req.app.locals['menu'],
+        collectionReserve = req.app.locals['reserve']
+    req.collectionMenu = collectionMenu
+    req.collectionReserve = collectionReserve
+    next()
+})
+
 app.use('/', require('./routes/index'))
-
-
-
-
 
 
 const port = process.env.PORT || 8000

@@ -23,6 +23,7 @@ const removeAllMenus = () => {      //reset menu on display
         cur.style.display = 'none'
     })
 }
+
 const showMenu = (menuId) => {  //show menu items depend on chosen menu
     switch (menuId) {
         case "breakfast":
@@ -51,6 +52,7 @@ window.addEventListener('load', (e) => {
 
 element.resSubmitBtn.addEventListener('click', () => {
     let data = {
+        reservationDate: element.resInputDate.value,
         time: element.resInputTime.value,
         name: element.resInputName.value
     }
