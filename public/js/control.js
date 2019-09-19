@@ -44,23 +44,68 @@ const controlMenu = () => {
     showMenu(menuId)
 }
 
+const checkInputDate = (inputDate) => {
+    //0[1-9]$|1[0-9]$|2[0-9]$|3[0-1]$\/0[1-9]$|1[0-2]$\/
+    //remove partial match with -- $ (End String)
+    let dateFormat = (/^(0[1-9]|1[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])$/g)
+
+    if (inputDate.match(dateFormat)) {
+
+        let inputDateArr = inputDate.split('/').map(val => parseInt(val))
+        inputDateArr.push(2019)
+        const [day, month, year] = inputDateArr
+
+        const dateReserve = new Date(year, (month - 1), day),
+            dateCurrent = new Date()
+        if (dateReserve > dateCurrent) {
+            return inputDateArr.join("/")
+        }
+        return "-1" //enter date after current time
+    }
+    return "-2" //enter date with the correct format
+
+}
+
+const checkInputName = (inputName) => {
+    return inputName == "" ? "-1" : inputName
+
+}
+
+element.resSubmitBtn.addEventListener('click', () => {
+    let inputDate = element.resInputDate.value,
+        inputName = element.resInputName.value,
+        validatedInputDate = checkInputDate(inputDate),
+        validatedInputName = checkInputName(inputName)
+
+
+    if (validatedInputDate == "-1") {
+        alert("Enter Appopriate Date (After Today)")
+    }
+    else if (validatedInputDate == "-2") {
+        alert("Enter Appropriate Date Format")
+    }
+    else if (validatedInputName == "-1") {
+        alert("Enter Appropriate Name")
+    }
+    else {
+        let data = {
+            reservationDate: validatedInputDate,
+            time: element.resInputTime.value,
+            name: validatedInputName
+        }
+        let sendData = JSON.stringify(data)
+        console.log(sendData)
+
+        ajax_post('/reserve', sendData)
+    }
+
+
+})
+
 window.addEventListener('load', (e) => {
     e.preventDefault()
     removeAllMenus()
     showMenu("breakfast")
-})
-
-element.resSubmitBtn.addEventListener('click', () => {
-    let data = {
-        reservationDate: element.resInputDate.value,
-        time: element.resInputTime.value,
-        name: element.resInputName.value
-    }
-    let sendData = JSON.stringify(data)
-    // window.location = '/reserve'
-
-    ajax_post('/reserve', sendData)
-
 })
 
 // ['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe))
