@@ -233,6 +233,43 @@ body, html {
     border-color: #696969;
 }
 
+@media only screen and (min-width: 1440px) {
+
+    .sideNav h1 a{
+        margin: auto;
+        margin-top:8rem;
+        margin-bottom:8rem;
+        color: #fff;
+        font-family: 'Lobster', cursive;
+        font-size: 3.5rem; 
+    }
+    .menuNav{
+        margin-left: 2.8%;
+    }
+    .menuNav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0.875rem 11.2rem;
+        text-decoration: none;
+    }
+    .menuModule .resultMenu{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width:60rem;
+    }
+    .footer {
+        /* margin-left: 19.8rem; */
+        padding:2rem 0 2rem 0;
+        margin-left: 15%;
+        display: grid;
+        grid-template-columns: auto 25rem auto;
+        background-color: #333;
+        color: #fff;
+    }
+  }
+
 
 
 
