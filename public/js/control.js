@@ -42,10 +42,17 @@ const showMenu = (menuId) => {  //show menu items depend on chosen menu
     }
 }
 
+const checkToken = (hashToken) => {
+    return Array.from(element.menu).map(cur => cur.className.substring(5)).includes(hashToken)
+}
+
 const controlMenu = () => {
-    const menuId = window.location.hash.substring(6)
-    removeAllMenus()
-    showMenu(menuId)
+    const hashToken = window.location.hash.substring(6)
+    if (checkToken(hashToken)) {
+        removeAllMenus()
+        showMenu(hashToken)
+    }
+
 }
 
 const reservationAlertBox = (res) => {
