@@ -1,15 +1,19 @@
 import { element } from "./base.js"
+import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@8/src/sweetalert2.js'
 
-const ajax_post = (url, data, type, progress) => {
+
+const ajax_post = (url, data, callback, progress) => {
     const xhr = new XMLHttpRequest()
     xhr.open('POST', url, true)
     //JSON PAYLOAD
     xhr.setRequestHeader("Content-type", "application/json");
-    xhr.responseType = type ? type : 'json' //arraybuffer, application/json plain/text
+    xhr.responseType = 'json' //arraybuffer, application/json plain/text
     xhr.onreadystatechange = () => {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            console.log(">>>>>>>>", xhr.response)
-            // callback(xhr.response)
+            callback({ stat: xhr.status, mes: xhr.response.message })
+        }
+        else if (xhr.readyState == 4 && xhr.status == 400) {
+            callback({ stat: xhr.status, mes: xhr.response.message })
         }
     }
     if (progress)
@@ -44,61 +48,25 @@ const controlMenu = () => {
     showMenu(menuId)
 }
 
-const checkInputDate = (inputDate) => {
-    //0[1-9]$|1[0-9]$|2[0-9]$|3[0-1]$\/0[1-9]$|1[0-2]$\/
-    //remove partial match with -- $ (End String)
-    let dateFormat = (/^(0[1-9]|1[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])$/g)
+const reservationAlertBox = (res) => {
+    let payload = (res.stat == 200) ?
+        { heightAuto: false, title: "Success", text: res.mes, type: "success" } : { heightAuto: false, title: "Oh No!", text: res.mes, type: "error" }
 
-    if (inputDate.match(dateFormat)) {
-
-        let inputDateArr = inputDate.split('/').map(val => parseInt(val))
-        inputDateArr.push(2019)
-        const [day, month, year] = inputDateArr
-
-        const dateReserve = new Date(year, (month - 1), day),
-            dateCurrent = new Date()
-        if (dateReserve > dateCurrent) {
-            return inputDateArr.join("/")
-        }
-        return "-1" //enter date after current time
-    }
-    return "-2" //enter date with the correct format
-
-}
-
-const checkInputName = (inputName) => {
-    return inputName == "" ? "-1" : inputName
-
+    Swal.fire(payload)
 }
 
 element.resSubmitBtn.addEventListener('click', () => {
-    let inputDate = element.resInputDate.value,
-        inputName = element.resInputName.value,
-        validatedInputDate = checkInputDate(inputDate),
-        validatedInputName = checkInputName(inputName)
-
-
-    if (validatedInputDate == "-1") {
-        alert("Enter Appopriate Date (After Today)")
+    let data = {
+        reservationDate: element.resInputDate.value,
+        time: element.resInputTime.value,
+        name: element.resInputName.value
     }
-    else if (validatedInputDate == "-2") {
-        alert("Enter Appropriate Date Format")
-    }
-    else if (validatedInputName == "-1") {
-        alert("Enter Appropriate Name")
-    }
-    else {
-        let data = {
-            reservationDate: validatedInputDate,
-            time: element.resInputTime.value,
-            name: validatedInputName
-        }
-        let sendData = JSON.stringify(data)
-        console.log(sendData)
+    let sendData = JSON.stringify(data)
+    console.log(sendData)
 
-        ajax_post('/reserve', sendData)
-    }
-
+    ajax_post('/reserve', sendData, res => {
+        reservationAlertBox(res)
+    })
 
 })
 
