@@ -28,8 +28,13 @@ router.post('/:reserve', (req, res) => {
     const payload = { reservationDate, time, name }
 
     req.collectionReserve.insertOne(payload)
-        .then(result => res.status(200).json({ message: 'Thank you!' }))    //returns payload to client
+        .then(result => {
+            console.log("OK GOOD")
+            res.status(200).json({ message: 'Thank you!' })
+        })    //returns payload to client
+        
         .catch(error => res.send(error))
+
 
 })
 
@@ -55,5 +60,6 @@ const checkInputDate = (inputDate) => {
 }
 
 
+// AIzaSyDotkKLJ3cA6UTswoSGF7pqB-M5eioGu8U
 
 module.exports = router

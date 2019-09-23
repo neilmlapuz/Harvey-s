@@ -232,9 +232,80 @@ body, html {
     border-width: thin;
     border-color: #696969;
 }
+@media only screen and (min-width: 1024px){
+    .sideNav a {
+        margin-bottom: 3.4375rem;
+        padding: 0rem 0.5rem 0.375rem 1rem;
+        text-decoration: none;
+        font-size: 1rem;
+        color: #fff;
+        display: block;
+        text-align: center;
+    }
+    .sideNav h1 a{
+        margin: auto;
+        margin-top:8rem;
+        margin-bottom:8rem;
+        color: #fff;
+        font-family: 'Lobster', cursive;
+        font-size: 2rem; 
+    }
+    .menuNav{
+        margin-left: 2.8%;
+    }
+    .menuNav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0.875rem 7.5rem;
+        text-decoration: none;
+    }
+    .menuModule .resultMenu{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width:40rem;
+    }
+    .aboutForm .aboutImg img{
+        height:300px;
+        width:500px;
+    }
+    .footer {
+        /* margin-left: 19.8rem; */
+        padding:2rem 0 2rem 0;
+        margin-left: 15%;
+        display: grid;
+        grid-template-columns: auto 15rem auto;
+        background-color: #333;
+        color: #fff;
+    }
+    .footer .mainName h1{
+        margin: auto;
+        font-family: 'Lobster', cursive;
+        font-size: 3.5rem;
+    
+    }
+    .footer .contactInfo .item{
+        font-size:0.8rem;
+    }
+    .footer .hoursInfo .timeDay{
+        font-size:0.8rem;
+    }
+    .footer .hoursInfo .hours{
+        font-size:0.8rem;
+    }
 
-@media only screen and (min-width: 1440px) {
+}
 
+@media only screen and (min-width: 1440px){
+    .menuNav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0.875rem 11.2rem;
+        text-decoration: none;
+    }
+    
     .sideNav h1 a{
         margin: auto;
         margin-top:8rem;
@@ -246,18 +317,16 @@ body, html {
     .menuNav{
         margin-left: 2.8%;
     }
-    .menuNav li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 0.875rem 11.2rem;
-        text-decoration: none;
-    }
+
     .menuModule .resultMenu{
         display:flex;
         flex-direction: row;
         justify-content: center;
         width:60rem;
+    }
+    .aboutForm .aboutImg img{
+        height:500px;
+        width:700px;
     }
     .footer {
         /* margin-left: 19.8rem; */
@@ -268,7 +337,101 @@ body, html {
         background-color: #333;
         color: #fff;
     }
-  }
+    .footer .mainName h1{
+        margin: auto;
+        font-family: 'Lobster', cursive;
+        font-size: 6rem;
+    }
+
+
+}
+@media only screen and (min-width: 1750px){
+    .sideNav h1 a{
+        margin: auto;
+        margin-top:8rem;
+        margin-bottom:8rem;
+        color: #fff;
+        font-family: 'Lobster', cursive;
+        font-size: 4rem; 
+    }
+    .menuNav{
+        margin-left: 2.8%;
+    }
+    .menuNav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0.875rem 13.9rem;
+        text-decoration: none;
+    }
+    .menuModule .resultMenu{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width:65rem;
+    }
+
+}
+@media only screen and (min-width: 1850px){
+
+    .menuNav{
+        margin-left: 2.8%;
+    }
+    .menuNav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0.875rem 14.8rem;
+        text-decoration: none;
+    }
+    .menuModule .resultMenu{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width:65rem;
+    }
+
+}
+@media only screen and (min-width: 1950px){
+
+    .menuNav{
+        margin-left: 2.8%;
+    }
+    .menuNav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0.875rem 15.6rem;
+        text-decoration: none;
+    }
+    .menuModule .resultMenu{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width:65rem;
+    }
+
+}
+@media only screen and (min-width: 2100px){
+
+    .menuNav{
+        margin-left: 2.8%;
+    }
+    .menuNav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0.875rem 17rem;
+        text-decoration: none;
+    }
+    .menuModule .resultMenu{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width:80rem;
+    }
+
+}
 
 
 
