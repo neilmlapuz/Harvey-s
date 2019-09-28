@@ -61,7 +61,17 @@ const reservationAlertBox = (res) => {
 
     Swal.fire(payload)
 }
+element.resDeleteBtn.addEventListener('click', () => {
+    let data = { name: element.resDelInput.value },
+        sendData = JSON.stringify(data)
 
+    console.log("Ok")
+    ajax_post('/delReserve/delRes', sendData, res => {
+        element.resDelInput.value = ""
+        reservationAlertBox(res)
+    })
+
+})
 element.resSubmitBtn.addEventListener('click', () => {
     let data = {
         reservationDate: element.resInputDate.value,
@@ -77,15 +87,8 @@ element.resSubmitBtn.addEventListener('click', () => {
 
 })
 
-element.resDeleteBtn.addEventListener('click', () => {
-    let data = { name: element.resDelInput.value },
-        sendData = JSON.stringify(data)
 
-    ajax_post('/delRes', sendData, res => {
-        reservationAlertBox(res)
-    })
 
-})
 
 window.addEventListener('load', (e) => {
     e.preventDefault()

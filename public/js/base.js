@@ -7,7 +7,7 @@ export const element = {
     resInputTime: document.getElementById('timeInput'),
     resInputName: document.getElementById('nameInput'),
     resSubmitBtn: document.getElementById('submitBtn'),
-    resDeleteBtn: document.getElementById('delReserve'),
+    resDeleteBtn: document.getElementById('delSubmitBtn'),
     resDelInput: document.getElementById('resDelName')
 
 
