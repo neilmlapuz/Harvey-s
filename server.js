@@ -42,6 +42,8 @@ app.use((req, res, next) => {
 })
 
 app.use('/', require('./routes/index'))
+app.use('/delReserve', require('./routes/delReserve'))
+
 
 
 const port = process.env.PORT || 8000

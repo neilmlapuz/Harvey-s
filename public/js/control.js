@@ -77,6 +77,16 @@ element.resSubmitBtn.addEventListener('click', () => {
 
 })
 
+element.resDeleteBtn.addEventListener('click', () => {
+    let data = { name: element.resDelInput.value },
+        sendData = JSON.stringify(data)
+
+    ajax_post('/delRes', sendData, res => {
+        reservationAlertBox(res)
+    })
+
+})
+
 window.addEventListener('load', (e) => {
     e.preventDefault()
     removeAllMenus()
