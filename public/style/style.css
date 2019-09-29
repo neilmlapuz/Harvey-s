@@ -23,7 +23,7 @@ body, html {
     text-align: center;
 }
 .caption span.border{
-    font-size: 2.1875rem;
+    font-size: 3rem;
     color:#fff;
     letter-spacing: 0.1875rem;
 }
@@ -109,7 +109,7 @@ body, html {
 .grid-item {
     /* border: 0.0625rem solid rgba(0, 0, 0, 0.8); */
     padding: 0.9375rem;
-    font-size: 0.75rem;
+    /* font-size: 0.75rem; */
     margin-bottom: 5rem;
 }
 .grid-item .itemName{
@@ -261,7 +261,133 @@ body, html {
     border-width: thin;
     border-color: #696969;
 }
+@media only screen and (min-width: 425px) {
+    .caption span.border{
+        font-size: 1rem;
+        color:#fff;
+        letter-spacing: 0.1875rem;
+    }
+    .menuModule {
+        /* margin-left: 17.0rem; */
+        margin-left: 0;
+    }
+    .menuNav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0.875rem 2.5rem;
+        text-decoration: none;
+    }
+    .grid-item {
+        /* border: 0.0625rem solid rgba(0, 0, 0, 0.8); */
+        padding: 0.9375rem;
+        /* font-size: 0.75rem; */
+        margin-bottom: 1rem;
+    }
+    .grid-item .itemName{
+        font-size: 0.55rem;
+        font-weight: bold;
+    }
+    .grid-item .itemDesc{
+        margin-top:0.7rem;
+        font-size: 0.60rem;
+        font-style: italic;
+    }
+    .grid-item .itemPrice{
+        font-size: 0.4rem;
+        font-weight: bold;
+        float: right;
+    }
+    .sideNav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    .menuModule .resultMenu{
+        margin-left:25%;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width:13rem;
+    }
+    .aboutForm .aboutImg img{
+        height:210px;
+        width:250px;
+    }
+    .aboutForm .aboutMain p{
+        font-size:0.5rem;
+    }
+    .reservationForm {
+        margin-left: 1%;
+        display:flex;
+        flex-direction: row;
+        padding: 5rem 0 5rem 0;
+        justify-content: center;
+    
+    }
+    .resField {
+        display: flex;
+        flex-direction: column;
+        width: 10rem;
+    }
+    
+    .footer {
+        /* margin-left: 19.8rem; */
+        padding:2rem 0 2rem 0;
+        margin-left: 0;
+        display: grid;
+        grid-template-columns: auto 6rem auto;
+        background-color: #333;
+        color: #fff;
+    }
+    .footer .mainName h1{
+        margin: auto;
+        font-family: 'Lobster', cursive;
+        font-size: 1rem;
+    
+    }
+    .footer .contactInfo h3 {
+        font-size:0.6rem;
+    }
+    .footer .hoursInfo h3 {
+        font-size:0.7rem;
+    }
+    .footer .contactInfo .item{
+        font-size:0.45rem;
+    }
+    .footer .hoursInfo .timeDay{
+        font-size:0.5rem;
+    }
+    .footer .hoursInfo .hours{
+        font-size:0.5rem;
+    }
+
+}
 @media only screen and (min-width: 760px){
+    .sideNav {
+        height: 100%;
+        width: 15%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        z-index: 1;
+    }
+    .resultMenu p {
+        font-size:1.8rem;
+    }
+    .grid-item {
+        /* border: 0.0625rem solid rgba(0, 0, 0, 0.8); */
+        padding: 0.9375rem;
+        /* font-size: 0.75rem; */
+        margin-bottom: 5rem;
+    }
     .grid-item .itemName{
         font-size: 0.95rem;
         font-weight: bold;
@@ -292,20 +418,28 @@ body, html {
     }
     .sideNav h1 a{
         margin: auto;
-        margin-top:8rem;
+        margin-top:3rem;
         margin-bottom:8rem;
         color: #fff;
         font-family: 'Lobster', cursive;
         font-size: 1.3rem; 
     }
+    .menuNav{
+        margin-left: 2.7%;
+    }
+    .menuModule {
+        /* margin-left: 17.0rem; */
+        margin-left: 12.5%;
+    }
     .menuNav li a {
         display: block;
         color: white;
         text-align: center;
-        padding: 0.875rem 5.2rem;
+        padding: 0.875rem 11vw;
         text-decoration: none;
     }
     .menuModule .resultMenu{
+        margin-left: 15%;
         display:flex;
         flex-direction: row;
         justify-content: center;
@@ -321,6 +455,18 @@ body, html {
     .menuNav{
         margin-left: 2.7%;
     }
+    .reservationForm {
+        margin-left: 15%;
+        display:flex;
+        flex-direction: row;
+        padding: 5rem 0 5rem 0;
+        justify-content: center;
+    }
+    .resField {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}
     .footer {
         /* margin-left: 19.8rem; */
         padding:2rem 0 2rem 0;
@@ -330,24 +476,41 @@ body, html {
         background-color: #333;
         color: #fff;
     }
+    .footer .contactInfo h3 {
+        font-size:1rem;
+    }
+    .footer .hoursInfo h3 {
+        font-size:1rem;
+    }
     .footer .mainName h1{
         margin: auto;
         font-family: 'Lobster', cursive;
         font-size: 2.5rem;
-    
     }
-    .footer .contactInfo .item{
-        font-size:0.65rem;
+    .footer .contactInfo .item h5{
+        font-size:0.75rem;
     }
-    .footer .hoursInfo .timeDay{
-        font-size:0.6rem;
+    .footer .hoursInfo .timeDay h5{
+        font-size:0.7rem;
     }
-    .footer .hoursInfo .hours{
-        font-size:0.6rem;
+    .footer .hoursInfo .hours h5{
+        font-size:0.7rem;
     }
 
 }
-@media only screen and (min-width: 1024px){
+
+@media only screen and (min-width: 1024px) {
+    .resultMenu p {
+        font-size:3rem;
+    }
+    .caption span.border{
+        font-size: 3rem;
+        color:#fff;
+        letter-spacing: 0.1875rem;
+    }
+    .sideNav {
+        overflow-y: hidden;
+    }
     .sideNav a {
         margin-bottom: 3.4375rem;
         padding: 0rem 0.5rem 0.375rem 1rem;
@@ -359,7 +522,7 @@ body, html {
     }
     .sideNav h1 a{
         margin: auto;
-        margin-top:8rem;
+        margin-top:5rem;
         margin-bottom:8rem;
         color: #fff;
         font-family: 'Lobster', cursive;
@@ -374,6 +537,20 @@ body, html {
         text-align: center;
         padding: 0.875rem 11.5vw;
         text-decoration: none;
+    }
+    .grid-item .itemName{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .grid-item .itemDesc{
+        margin-top:0.7rem;
+        font-size: 1rem;
+        font-style: italic;
+    }
+    .grid-item .itemPrice{
+        font-size: 0.95rem;
+        font-weight: bold;
+        float: right;
     }
     .menuModule .resultMenu{
         display:flex;
@@ -394,21 +571,28 @@ body, html {
         background-color: #333;
         color: #fff;
     }
+    .footer .contactInfo h3 {
+        font-size:1rem;
+    }
+    .footer .hoursInfo h3 {
+        font-size:1rem;
+    }
     .footer .mainName h1{
         margin: auto;
         font-family: 'Lobster', cursive;
-        font-size: 3.5rem;
-    
+        font-size: 2.5rem;
     }
-    .footer .contactInfo .item{
+    .footer .contactInfo .item h5{
+        font-size:0.9rem;
+    }
+    .footer .hoursInfo .timeDay h5{
         font-size:0.8rem;
     }
-    .footer .hoursInfo .timeDay{
+    .footer .hoursInfo .hours h5{
         font-size:0.8rem;
     }
-    .footer .hoursInfo .hours{
-        font-size:0.8rem;
-    }
+
+
 
 }
 
@@ -417,7 +601,7 @@ body, html {
         display: block;
         color: white;
         text-align: center;
-        padding: 0.875rem 11.2rem;
+        padding: 0.875rem 11.5vw;
         text-decoration: none;
     }
     
@@ -463,12 +647,13 @@ body, html {
         display: block;
         color: white;
         text-align: center;
-        padding: 0.875rem 13.4rem;
+        padding: 0.875rem 12.5vw;
         text-decoration: none;
     }
     .footer .contactInfo .item{
         font-size:0.95rem;
     }
+
 
 }
 @media only screen and (min-width: 1750px){
@@ -483,11 +668,12 @@ body, html {
     .menuNav{
         margin-left: 2.8%;
     }
+
     .menuNav li a {
         display: block;
         color: white;
         text-align: center;
-        padding: 0.875rem 13.9rem;
+        padding: 0.875rem 12.6vw;
         text-decoration: none;
     }
     .menuModule .resultMenu{
