@@ -4,7 +4,7 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     mongo = require('mongodb').MongoClient,
     assert = require('assert'),
-    url = 'mongodb://localhost:27017'
+    url = 'mongodb+srv://nml:Shippuden14@harveycluster-gpldz.mongodb.net/test?retryWrites=true&w=majority'
 
 
 
