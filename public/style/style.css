@@ -329,6 +329,11 @@ input[type="text"] {
         padding: 10rem 0rem;
     
     }
+    input[type="text"] {
+        font-family: monospace;
+        font-size: 0.8rem;
+        color: peru;
+      }
     .aboutForm .aboutImg img{
         height:210px;
         width:250px;
@@ -580,6 +585,11 @@ input[type="text"] {
         font-family: 'Lobster', cursive;
         font-size: 1.3rem; 
     }
+    input[type="text"] {
+        font-family: monospace;
+        font-size: 0.95rem;
+        color: peru;
+      }
     .menuNav{
         margin-left: 2.7%;
     }
@@ -937,6 +947,11 @@ input[type="text"] {
         justify-content: center;
         width:80rem;
     }
+    input[type="text"] {
+        font-family: monospace;
+        font-size: 1.5rem;
+        color: peru;
+      }
 
 }
 
